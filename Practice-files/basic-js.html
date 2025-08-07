@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS with 3 buttons</title>
+  <style>
+    
+    * {
+      margin: 0px; padding: 0px; font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    body{ 
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+  }
+
+    .total{
+      height: 30vh;
+      width: 60vw;
+      background-color: rgb(255, 255, 255);
+      margin: 10px;
+      border: 2px solid #535353;
+      border-radius: 10px;
+    }
+    .buttons{
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    #b1, #b2, #b3 {
+      background-color: lightblue;
+      border: none;
+      border-radius: 8px;
+      margin-top: 20px;
+      font-size: 14px;
+      box-sizing: border-box;
+      height: 40px;
+      width: 140px;
+    }
+    p { 
+      color: rgb(0, 90, 125);
+      font-size: 24px;
+      text-transform: uppercase;
+      font-weight: 300;
+    }
+
+    .p-box{
+      width: 100%;
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10%;
+    }
+
+    @media screen and (max-width:729px){
+      
+      .total{width: 80vw; height: 50vh;}
+      
+      .buttons{flex-direction: column; align-items: center;}
+    
+    }
+    @media screen and (max-width:320px){
+      p {font-size: 21px;}
+    }
+  </style>
+</head>
+<body>
+    <div class="total">
+      <div class="buttons">
+        <button id="b1" onclick="cartQuantity++; document.querySelector('#itemNumber').innerText = cartQuantity;">Add to bag</button>
+        <button id="b2" onclick="cartQuantity--; document.querySelector('#itemNumber').innerText = cartQuantity;">Move to wishlist</button>
+        <button id="b3" onclick="cartQuantity += 2; document.querySelector('#itemNumber').innerText = cartQuantity;">Add 1+1 sale items</button>
+      </div>
+      <div class="p-box">
+      <p>Your bag has <span id="itemNumber"></span> items.</p></div>
+    </div>
+    <script>
+      let cartQuantity = 0;
+      document.querySelector('#itemNumber').innerText = cartQuantity
+    </script>
+</body>
+</html>
