@@ -12,24 +12,24 @@
         <input type="text" class="display" readonly>
       </div>
       <div class="allbuttons">
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>+</button>
-        <button>-</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>x</button>
-        <button>÷</button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button id="solveButton">=</button>
-        <button>.</button>
-        <button>0</button>
-        <button>00</button>
-        <button>C</button>
+        <button onclick="add7()">7</button>
+        <button onclick="add8()">8</button>
+        <button onclick="add9()">9</button>
+        <button onclick="plus()">+</button>
+        <button onclick="minus()">-</button>
+        <button onclick="add4()">4</button>
+        <button onclick="add5()">5</button>
+        <button onclick="add6()">6</button>
+        <button onclick="multiply()">x</button>
+        <button onclick="divide()">÷</button>
+        <button onclick="add1()">1</button>
+        <button onclick="add2()">2</button>
+        <button onclick="add3()">3</button>
+        <button id="solveButton" onclick="result()">=</button>
+        <button onclick="adddot()">.</button>
+        <button onclick="add0()">0</button>
+        <button onclick="add00()">00</button>
+        <button onclick="answer = ''; document.querySelector('.display').value = answer;">C</button>
         <button>
           <img id="personIcon" src="Person.svg" alt="Person Icon">
         </button>
