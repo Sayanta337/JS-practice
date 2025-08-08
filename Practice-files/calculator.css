@@ -99,6 +99,6 @@ button {
 
 button:active {
   border-style: dashed;
-  background-color: #ffffff;
+  background-color: rgb(160, 220, 255);
   height: 18%;
 }
