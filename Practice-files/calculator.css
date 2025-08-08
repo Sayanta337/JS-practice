@@ -63,6 +63,7 @@ button {
   color: rgb(0, 120, 150);
   font-size: 18px;
   font-weight: 700;
+  transition: all ease-in-out 0.1s;
 }
 
 #solveButton {
@@ -94,4 +95,10 @@ button {
   #personIcon {
     height: 22px;
   }
+}
+
+button:active {
+  border-style: dashed;
+  background-color: #ffffff;
+  height: 18%;
 }
