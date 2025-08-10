@@ -73,6 +73,15 @@ button {
 #personIcon {
   height: 18px;
 }
+
+#playButton {
+  color: rgb(200, 100, 0);
+}
+
+#personIconBox, #playButton{
+ border-color: rgb(200, 100, 0);
+}
+
 @media (min-width: 750px) {
   .total {
     width: 70vw;
@@ -101,4 +110,14 @@ button:active {
   border-style: dashed;
   background-color: rgb(160, 220, 255);
   height: 18%;
+}
+
+#playButton:active{
+  background-color: rgb(255, 200, 150);
+}
+#personIconBox:active{
+  background-color: rgb(255, 200, 150);
+}
+#solveButton:active {
+  background-color: rgb(160, 220, 255);
 }
