@@ -69,3 +69,16 @@ function result() {
   answer = eval(answer);
   document.querySelector('.display').value = answer;
 }
+//audio section
+let audio = document.querySelector('#myAudio')
+let btn = document.querySelector('#playButton')
+
+function playAudio() {
+  if (audio.paused){
+    audio.play();
+    btn.innerText = "||";
+  }else{
+    audio.pause();
+    btn.innerText = "♫";
+  }
+}

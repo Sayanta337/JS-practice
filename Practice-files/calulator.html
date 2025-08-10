@@ -8,6 +8,7 @@
   </head>
   <body>
     <main class="total">
+      <audio src="background.mp3" id="myAudio" loop></audio>
       <div class="display-box">
         <input type="text" class="display" readonly>
       </div>
@@ -33,7 +34,7 @@
         <button>
           <img id="personIcon" src="Person.svg" alt="Person Icon">
         </button>
-        <button>♫</button>
+        <button id="playButton" onclick="playAudio()">♫</button>
       </div>
     </main>
     <script src="calculator.js"></script>
