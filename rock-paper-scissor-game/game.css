@@ -88,26 +88,47 @@ button {
   justify-content: center;
   align-items: center;
 }
-
 #Layer_1{
   height: 95%;
 }
-
 .cls-1 {
   fill: #00324b;
 }
-
 .cls-2 {
   fill: #6d6e71;
 }
-
 .cls-2, .cls-3 {
   stroke: #00324b;
   stroke-miterlimit: 10;
   stroke-width: 10px;
 }
-
 .cls-3 {
   fill: aliceblue;
   /* fill: #f0d246; */
+}
+@media (min-width: 750px) {
+  .total {
+    width: 70vw;
+    height: 70vh;
+  }
+  button {
+    font-size: 30px;
+  }
+  .optionOutput{ font-size: 16px;}
+  .display{font-size: 35px;}
+}
+@media (min-width: 1024px) {
+  .total {
+    width: 40vw;
+  }
+  button {
+    font-size: 30px;
+  }
+  .optionOutput{ font-size: 16px;}
+  .display{font-size: 35px;}
+}
+button:active {
+  border:2px dashed rgb(100, 225, 255);
+  background-color: #252525;
+  width: 55%;
 }
