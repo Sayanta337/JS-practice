@@ -40,6 +40,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-transform: uppercase;
 }
 .optionOutput {
   width: 75%;
@@ -57,6 +58,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   padding: 5px;
+  text-transform: capitalize;
 }
 .allbuttons {
   width: 100%;
