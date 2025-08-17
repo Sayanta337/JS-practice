@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function</title>
+</head>
+<body>
+  <script>
+    console.log("The developer of this site is Sayanta (you can call me Leo).");
+    //1st
+    function Checker(number) {
+      let rem = number % 2;
+      if (rem==1){return "Odd number"}else{return "Even number"};
+    };
+    console.log(Checker(2));
+    console.log(Checker(1));
+    //2nd
+    function num(a,b){
+      if (a > b){return a} else {return b};
+    };
+    console.log(`The bigger number is ${num(1,3)}`);
+    console.log(`The bigger number is ${num(30,20)}`);
+    //3rd
+    function degree(a){
+      b = (9/5) * a + 32;
+      return b;
+    }
+    console.log(`The temperature is ${degree(1)}°F.`);
+    console.log(`The temperature is ${degree(0)}°F.`);
+    console.log(`The temperature is ${degree(40)}°F.`);
+  </script>
+</body>
+</html>
