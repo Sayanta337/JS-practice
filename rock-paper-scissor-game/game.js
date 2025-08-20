@@ -10,12 +10,15 @@ bulbBG.setAttribute("fill", "#f0f8ff");
 bColor.style.borderColor = "#00324b";
 gameInfo.innerText = "press a button";
 winAlert.innerText = "welcome!!";
-let score = {
-  win: 0,
-  lose: 0,
-  tie: 0,
-};
-
+let score;
+let scoreStr = localStorage.getItem('localScore');
+resetScore(scoreStr);
+function resetScore(scoreStr){
+  score = scoreStr ? JSON.parse(scoreStr) : {win: 0, lose: 0, tie: 0,};
+  score.displayScore = function(){
+    return `Win:${score.win}, Lost:${score.lose}, Tie:${score.tie}.`;
+  };
+}
 //computer choice validator
 function ccgen() {
   xNumber = Math.random() * 9;
@@ -73,24 +76,36 @@ bColor.style.borderColor = "#f0d246";
 }
 };
 
+function lastInfo(){
+  gameInfo.innerText = `User chose ${userChoice} and Computer chose ${computerChoice}.
+  ${score.displayScore()}`;
+  localStorage.setItem('localScore', JSON.stringify(score));
+}
+
 function finalRclick() {
   userChoice = 'rock';
   ccgen();
   winMsg();
-  gameInfo.innerText = `User chose ${userChoice} and Computer chose ${computerChoice}.
-  Win:${score.win}, Lost:${score.lose}, Tie:${score.tie}.`;
+  lastInfo();
 };
 function finalPclick() {
   userChoice = 'paper';
   ccgen();
   winMsg();
-  gameInfo.innerText = `User chose ${userChoice} and Computer chose ${computerChoice}.
-  Win:${score.win}, Lost:${score.lose}, Tie:${score.tie}.`;
+  lastInfo();
 };
 function finalSclick() {
   userChoice = 'scissor';
   ccgen();
   winMsg();
-  gameInfo.innerText = `User chose ${userChoice} and Computer chose ${computerChoice}.
-  Win:${score.win}, Lost:${score.lose}, Tie:${score.tie}.`;
+  lastInfo();
+};
+function finalRemover(){
+  localStorage.clear; 
+  resetScore();
+  gameInfo.innerText = `Game has been reset.`;
+  bulbBG.setAttribute("fill", "#f0f8ff");
+  bColor.style.borderColor = "#00324b";
+  winAlert.innerText = `New Game!!`;
+  localStorage.setItem('localScore', JSON.stringify(score));
 };
