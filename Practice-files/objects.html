@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+</head>
+<body>
+  <script>
+    console.log("The developer of this site is Sayanta (you can call me Leo).");
+    //1
+    console.log("🌟");
+    let products = {
+      brand: "Mango",
+      itemName: "Cotton Striped T-shirt",
+      sellerPrice: 999,
+      offer: 13,
+      soldNo: 38,
+      rating: 4.5,
+    };
+    console.log(products);
+    //2
+    console.log("🌟🌟");
+    copyProducts = products;
+    copyProducts.brand = "Banana";
+    console.log(products);
+    //3
+    console.log("🌟🌟🌟");
+    let deliveryInfo = {
+      "delivery-time": "1 Hour remaining."
+    };
+    console.log(deliveryInfo["delivery-time"]);
+    //4
+    console.log("🌟🌟🌟🌟");
+    let fourth = {
+      message: 'good job',
+      status: 'complete',
+    };
+    let message1= fourth.message;
+    console.log(message1);
+    let status1= fourth.status;
+    console.log(status1);
+    //5
+    console.log("🌟🌟🌟🌟🌟");
+    function compair(a, b){
+      if (typeof a !== 'object' || typeof b !== 'object'){ 
+        console.warn("Not valid.");
+        return "False";
+      };
+      if (a.brand === b.brand && a.itemName === b.itemName && a.sellerPrice === b.sellerPrice){
+        return "True"}else {return "False"};
+    };
+    
+    let products2 = {
+      brand: "Mango",
+      itemName: "Cotton Striped T-shirt",
+      sellerPrice: 999,
+    };
+
+    let products3 = {
+      brand: "Mango",
+      itemName: "Cotton Striped T-shirt",
+      sellerPrice: 999,
+    };
+
+    console.log(compair(products2, ''));
+    console.log(compair(products3, products2));
+  </script>
+</body>
+</html>
