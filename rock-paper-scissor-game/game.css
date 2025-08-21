@@ -6,9 +6,66 @@
 body {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #252525;
+}
+.greeting{
+  height: 10vh;
+  width: 80vw;
+  background-color: #00324b;
+  border-radius: 10px;
+  border: 1px dotted rgb(100, 225, 255);
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  display: flex;
+  flex-grow: 0;
+}
+#innerFirst{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 80%;
+  flex-grow: 1;
+}
+#innerSecond{
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 20%;
+}
+.greeting p {
+  font-size: 14px;
+  color: aliceblue;
+  letter-spacing: 1px;
+  font-weight: 100;
+  font-style: italic;
+  margin-bottom: 2px;
+}
+.greeting input {
+  font-size: 16px;
+  color: aliceblue;
+  letter-spacing: 1px;
+  width: 200px;
+  height: 28px;
+  border: none;
+  margin: 0;
+  background-color: #00324b;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-weight: 100;
+}
+#submitButton{
+  height: 40px;
+  width: 40px;
+  font-size: 16px;
+  margin: 0;
+  border-radius: 50%;
 }
 .total {
   height: 60vh;
@@ -119,15 +176,22 @@ button {
     width: 70vw;
     height: 70vh;
   }
+  .greeting {
+    width: 70vw;
+  }
   button {
     font-size: 25px;
   }
   .optionOutput{ font-size: 16px;}
   #Remover{ font-size: 16px;}
+  .greeting p{ font-size: 16px;}
   .display{font-size: 35px;}
 }
 @media (min-width: 1024px) {
   .total {
+    width: 40vw;
+  }
+  .greeting {
     width: 40vw;
   }
   button {
@@ -135,10 +199,14 @@ button {
   }
   .optionOutput{ font-size: 16px;}
   #Remover{ font-size: 16px;}
+  .greeting p{ font-size: 16px;}
   .display{font-size: 35px;}
 }
 button:active {
-  border:2px dashed rgb(100, 225, 255);
   background-color: #252525;
   width: 55%;
+}
+#inName:focus{
+  outline: 1px dotted #64e1ff;
+  border-radius: 10px;
 }

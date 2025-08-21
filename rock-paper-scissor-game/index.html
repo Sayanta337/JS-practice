@@ -8,6 +8,15 @@
   <link rel="stylesheet" href="game.css">
 </head>
 <body>
+  <div class="greeting">
+    <div id="innerFirst">
+      <p id="greetingMsg"></p>
+      <input type="text" placeholder="Enter Your Name" id="inName" maxlength="20">
+    </div>
+    <div id="innerSecond">
+      <button id="submitButton" type="submit">✅</button>
+    </div>
+  </div>
   <main class="total">
     <section class="display-box">
       <div class="display"></div>
@@ -27,7 +36,7 @@
       <button id="rock" onclick="finalRclick()">👊🏻</button>
       <button id="paper" onclick="finalPclick()">🖐🏻</button>
       <button id="scissor" onclick="finalSclick()">✌🏻</button>
-      <button id="Remover" onclick="finalRemover()">Reset Game</button>
+      <button id="Remover" onclick="finalRemover()">Reset All</button>
     </div>
   </main>
   <script src="game.js"></script>

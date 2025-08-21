@@ -2,14 +2,18 @@ console.log("The developer of this site is Sayanta (you can call me Leo)");
 let bulbBG = document.querySelector('#thebulb');
 const winAlert = document.querySelector('.display');
 const gameInfo = document.querySelector('.optionOutput');
+const finalGreet = document.querySelector('#greetingMsg');
+let innerSecondJS = document.querySelector('#innerSecond');
 let bColor = document.querySelector('.total');
 let xNumber;
 let computerChoice;
 let userChoice;
 bulbBG.setAttribute("fill", "#f0f8ff");
 bColor.style.borderColor = "#00324b";
+innerSecondJS.style.display = "flex";
 gameInfo.innerText = "press a button";
 winAlert.innerText = "welcome!!";
+finalGreet.innerText = getGreeting();
 let score;
 let scoreStr = localStorage.getItem('localScore');
 resetScore(scoreStr);
@@ -30,6 +34,22 @@ if (0 < xNumber && 3 > xNumber) {
   computerChoice = 'scissor'
 }
 };
+//time based greeting
+function getGreeting() {
+  const now = new Date();
+  const hour = now.getHours();
+
+  if (hour >= 5 && hour < 12) {
+   return "Good Morning,";
+  } else if (hour >= 12 && hour < 17) {
+     return "Good Afternoon,";
+   } else if (hour >= 17 && hour < 21) {
+     return "Good Evening,";
+   } else {
+     return "Good Night,";
+   }
+};
+//saving user name
 
 function winMsg() {
 if (computerChoice == userChoice){
