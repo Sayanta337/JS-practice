@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>json, localStorage</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    button{
+      height: 70px;
+      width: 200px;
+      max-width: 90%;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      color: #252525;
+    }
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #252525;
+    }
+  </style>
+</head>
+<body>
+  <button id="mybutton" onclick="pressB()"></button>
+  <script>
+    console.log("The developer of this site is Sayanta (you can call me Leo).");
+    //Create a Button which shows the number how many times it has been pressed. done
+    //Also, it has different colors for when it has been pressed odd or even times. done
+    //The click count should also survive browser refresh. done
+    document.querySelector('#mybutton').style.backgroundColor = "aliceblue";
+    let pressCount;
+    
+    getCount();
+
+    function pressB(){
+      pressCount.number++;
+      document.querySelector('#mybutton').innerText = pressCount.display();
+      oddEvenChecker();
+      setCount();
+    };
+    
+    pressCount.display = function(){
+      return `Button clicked ${pressCount.number} times.`;
+    };
+    
+    function oddEvenChecker(){
+      if (pressCount.number % 2 === 0){
+        document.querySelector('#mybutton').style.backgroundColor = "#82E682";
+      }else{
+        document.querySelector('#mybutton').style.backgroundColor = "#E68282";
+      };
+    }
+
+    function setCount(){
+      localStorage.setItem('localCount', JSON.stringify(pressCount));
+    };
+
+    function getCount(){
+      x = localStorage.getItem('localCount');
+      pressCount = x ? JSON.parse(x) : {number:0};
+      document.querySelector('#mybutton').innerText = `Button clicked ${pressCount.number} times.`;
+    }
+  </script>
+</body>
+</html>
