@@ -3,14 +3,12 @@ let bulbBG = document.querySelector('#thebulb');
 const winAlert = document.querySelector('.display');
 const gameInfo = document.querySelector('.optionOutput');
 const finalGreet = document.querySelector('#greetingMsg');
-let innerSecondJS = document.querySelector('#innerSecond');
 let bColor = document.querySelector('.total');
 let xNumber;
 let computerChoice;
 let userChoice;
 bulbBG.setAttribute("fill", "#f0f8ff");
 bColor.style.borderColor = "#00324b";
-innerSecondJS.style.display = "flex";
 gameInfo.innerText = "press a button";
 winAlert.innerText = "welcome!!";
 finalGreet.innerText = getGreeting();
@@ -49,7 +47,6 @@ function getGreeting() {
      return "Good Night,";
    }
 };
-//saving user name
 
 function winMsg() {
 if (computerChoice == userChoice){

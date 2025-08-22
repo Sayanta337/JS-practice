@@ -20,52 +20,16 @@ body {
   box-sizing: border-box;
   margin-bottom: 5px;
   display: flex;
-  flex-grow: 0;
-}
-#innerFirst{
-  display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  height: 100%;
-  width: 80%;
-  flex-grow: 1;
-}
-#innerSecond{
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 20%;
 }
 .greeting p {
-  font-size: 14px;
+  font-size: 18px;
   color: aliceblue;
   letter-spacing: 1px;
   font-weight: 100;
   font-style: italic;
   margin-bottom: 2px;
-}
-.greeting input {
-  font-size: 16px;
-  color: aliceblue;
-  letter-spacing: 1px;
-  width: 200px;
-  height: 28px;
-  border: none;
-  margin: 0;
-  background-color: #00324b;
-  box-sizing: border-box;
-  text-align: center;
-  cursor: pointer;
-  text-transform: capitalize;
-  font-weight: 100;
-}
-#submitButton{
-  height: 40px;
-  width: 40px;
-  font-size: 16px;
-  margin: 0;
-  border-radius: 50%;
 }
 .total {
   height: 60vh;
@@ -184,7 +148,6 @@ button {
   }
   .optionOutput{ font-size: 16px;}
   #Remover{ font-size: 16px;}
-  .greeting p{ font-size: 16px;}
   .display{font-size: 35px;}
 }
 @media (min-width: 1024px) {
@@ -199,14 +162,9 @@ button {
   }
   .optionOutput{ font-size: 16px;}
   #Remover{ font-size: 16px;}
-  .greeting p{ font-size: 16px;}
   .display{font-size: 35px;}
 }
 button:active {
   background-color: #252525;
   width: 55%;
-}
-#inName:focus{
-  outline: 1px dotted #64e1ff;
-  border-radius: 10px;
 }
