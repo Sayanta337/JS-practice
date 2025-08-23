@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array loop etc</title>
+</head>
+<body>
+  <h1>Open the console</h1>
+  <script>
+    console.log("The developer of this site is Sayanta (you can call me Leo).");
+    
+    console.log('//1');
+    let one = [5,6];
+    one.unshift(4);
+    one.push(7);
+    console.log(one);
+    
+    console.log('//2');
+    function getElement(arr, position){
+      return arr[position - 1];
+      //cause index number of array is smaller than a position.
+    };
+    let score;
+    let thearray = [1,'hi',4,score = {win:2},9];
+    console.log(getElement(thearray, 4));
+    
+    console.log('//3');
+    function getE(arr){return arr.slice(0, arr.length);}
+    let x = [1,2,'hi',4];
+    let x2 = getE(x);
+    x2[2] = "not hi";
+    console.log(x);
+    console.log(x2);
+    if (x2 == x){console.log(`Both are same`);}else{console.log(`Both are not same`);};
+    
+    console.log('//4');
+    function primeChecker(num){
+      for (let i=2; i < num; i++){
+        if (num % i === 0){return false;};
+      };
+      if (num > 1){return true;}
+    };
+    console.log(primeChecker(11));
+    
+    let numberrs = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100];
+    let numres = "";
+    for (let g = 0; g < numberrs.length; g++){
+      if (primeChecker(numberrs[g]) == true){numres += numberrs[g] + ", "};
+      continue;
+    }
+    console.log(numres);
+    
+    console.log('//5');
+    
+    console.log('//6');
+    let randomArray = [1,2,3,4,5,6,7,8,9,10];
+    for (let i = 9; i >= 0; i--){
+      console.log(randomArray[i]);
+    };
+    
+    console.log('//7');
+    let anotherArray = [1,-6,5,7,-98];
+    for (let i=0; i<=4; i++){
+      if (anotherArray[i] < 0){ continue };
+      console.log(anotherArray[i]);
+    };
+    
+    console.log('//8');
+    let sArray = ['KG', 'Coding', 'Javascript', 'Course', 'Is','The', 'Best.'];
+    let result = "";
+    for (let i = 0; i < sArray.length;i++){
+      result += sArray[i] + " ";
+    }
+    console.log(result);
+
+    //0 to 100 number generator
+    let extrasum = ``;
+    for (let i = 0; i <= 100; i++){extrasum += i + `, `};
+    console.log(extrasum);
+  </script>
+</body>
+</html>
