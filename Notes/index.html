@@ -3,18 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>^_^ Notes</title>
+  <title>^_^ Notes app</title>
   <link rel="stylesheet" href="notes.css">
 </head>
 <body>
-  <h1>Todo notes</h1>
-  <div class="input_field">
-    <input id="user_input" type="text">
-    <button id="input_submit">+</button>
-  </div>
-  <div class="output_field">
-    <div class="outputs"></div>
-  </div>
+  <header>
+    <h1>Quick notes</h1>
+  </header>
+  <main>
+    <div class="input_field">
+      <input id="user_input" type="text">
+      <button id="input_submit">+</button>
+    </div>
+    <div class="output_field">
+      <div class="outputs">
+        <div class="test">
+          <span class="para_notes">Welcome user, this is a test text.</span>
+          <button class="delete_btn">🗑️</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer></footer>
   <script src="notes.js"></script>
 </body>
 </html>
